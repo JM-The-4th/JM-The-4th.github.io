@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>!!!! WELCOME TO MY AWESOME HOMEPAGE !!!!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background: black;
+    color: lime;
+    font-family: "Comic Sans MS", cursive, sans-serif; /*Return of the undertale*/
+
+  }
+
+  /* Rainbow welcome text */
+  .rainbow {
+    font-size: 3rem;
+    font-weight: bold;
+    animation: blink 1s infinite;
+    letter-spacing: 5px;
+    text-align: center;
+  }
+  /* Individual letter colors */
+  .rainbow span:nth-child(1) { color: red; }
+  .rainbow span:nth-child(2) { color: orange; }
+  .rainbow span:nth-child(3) { color: yellow; }
+  .rainbow span:nth-child(4) { color: lime; }
+  .rainbow span:nth-child(5) { color: cyan; }
+  .rainbow span:nth-child(6) { color: magenta; }
+  .rainbow span:nth-child(7) { color: white; }
+/* Heading styles */
+  .content h1 {
+    font-size: 2em;
+    color: aqua;
+    text-decoration: underline;
+    animation: blink 1.5s infinite;
+  }
+  /* CSS marquee: some of the old HTML tags like <center> are deprecated and bad practice so CSS is used */
+  .marquee {
+    font-size: 2em;
+    font-weight: bold;
+    color: yellow;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    padding: 10px 0;
+  }
+  .marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee-left 20s linear infinite;
+  }
+  .marquee.right span { animation: marquee-right 18s linear infinite; padding-left: 0; padding-right: 100%; }
+  .marquee.alternate span { animation: marquee-alternate 15s linear infinite; }
+/* Keyframes for marquee animations */
+  @keyframes marquee-left { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
+  @keyframes marquee-right { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
+  @keyframes marquee-alternate { 0% { transform: translateX(0); } 50% { transform: translateX(-100%); } 100% { transform: translateX(0); } }
+
+  /* Blink animation */
+  @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
+ 
+
+  /* Page layout */
+  .container { display: flex; flex-direction: column; min-height: 100vh; }
+  .main-table { flex: 1; display: grid; grid-template-columns: 200px 1fr 150px; border: 5px dotted yellow; }
+  .sidebar { background: #000080; padding: 20px; color: white; }
+  .content { background: #111177; padding: 30px; text-align: center; }
+  a { color: aqua; font-weight: bold; }
+  a:hover { color: red; }
+/* Image adjustments */
+    .AOL {
+        width: 200px;
+        height: auto;
+    }
+    .fire {
+        width: 100px;
+        height: auto;
+    }
+    .jackhammer {
+        width: 150px;
+        height: auto;
+    }
+    .sparkle {
+        width: 100px;
+        height: auto;
+        margin: 0 10px;
+    }
+  /* Shoutbox marquee (up/down) */
+  .shoutbox {
+    height: 600px;
+    overflow: hidden;
+    background: #000080;
+    padding: 10px;
+  }
+  .shoutbox div { animation: scroll-up 25s linear infinite; }
+  @keyframes scroll-up {
+    0% { transform: translateY(100%); }
+    100% { transform: translateY(-100%); }
+  }
+</style>
+</head>
+
+
+<!--I just mentioned deprecation, but for authenticity, inline styling has been used! Don't kill me please-->
+<body>
+<audio autoplay loop><source src="[overscorn] nostalgic breakdown.mp3" type="audio/mpeg"></audio> <!--Audio, only works in firefox-->
+<div class="container">
+
+  <!-- Welcome sign! All letters in spans to modify colors at discretion-->
+  <div class="rainbow">
+    <span>W</span><span>E</span><span>L</span><span>C</span><span>O</span><span>M</span><span>E</span>
+    <span>T</span><span>O</span>
+    <span>M</span><span>Y</span>
+    <span>C</span><span>O</span><span>O</span><span>L</span>
+    <span>W</span><span>E</span><span>B</span><span>S</span><span>I</span><span>T</span><span>E</span> !!!!!
+  </div>
+<!-- Construction marquee-->
+  <div class="marquee"><span>★★★★★ UNDER CONSTRUCTION ★★★★★ BEST VIEWED IN IE 5.5 @ 800x600 ★★★★★</span></div>
+
+  <div class="main-table">
+
+    <!-- Left sidebar -->
+    <aside class="sidebar">
+      <strong style="font-size:1.5em;">Navigation</strong><br><br>
+      <a href="#">★ Home ★</a><br>
+      <a href="#">★ About Me ★</a><br>
+      <a href="#">★ My Pictures ★</a><br>
+      <a href="#">★ Guestbook ★</a><br>
+      <a href="#">★ Links ★</a><br>
+      <a href="#">★ Webrings ★</a><br><br>
+      <img class="fire" src="fire.gif" alt="fire"><br><br>
+      <span style="color:yellow;font-size:2em;font-weight:bold;">
+        You are visitor #<span id="counter"></span>
+      </span>
+    </aside>
+
+    <!-- Main content -->
+    <main class="content">
+      <h1>!!! THIS SITE IS BEST VIEWED WITH NETSCAPE 4.0 OR HIGHER !!!</h1>
+      <img class="jackhammer" src="jackhammer.gif" alt="under construction">
+      <p style="font-size:1.8em;">Hey dudes and dudettes! Welcome to the coolest page on the net!</p>
+
+      <div class="marquee right"><span>★★★ THIS SITE IS UNDER CONSTRUCTION ★★★</span></div>
+
+      <p>Here are some of my favorite things:</p>
+      <ul style="font-size:1.3em;">
+        <li>🔊MIDI music (still playing!)</li>
+        <li>🎆Sparkly GIFs</li>
+        <li>🚨Blinking tags</li>
+        <li>🏗️Under construction signs</li>
+      </ul>
+      <!--Email that I didn't have time to flaskify because aol is dead-->
+      <p><a href="mailto:yourname@aol.com">
+        <img class="AOL" src="AOL.png" alt="email me">
+      </a></p>
+      <!--Form i also couldn't flaskify-->
+      <p style="font-size:1.5em;">Sign my guestbook or I will be sad :(</p>
+      <form action="/" method="post">
+        <input type="text" size="30" placeholder="Your name here">
+        <input type="submit" value="SIGN IT!!!">
+      </form><br><br> <!--These breaks are 100% necessary-->
+
+      <!--Sparkles!!!-->
+      <img class="sparkle" src="sparkle1.gif" alt="sparkle pinky">
+      <img class="sparkle"  src="sparkle2.gif" alt="sparkle gold">
+      <img class="sparkle"  src="sparkle3.gif" alt="sparkle white">
+      <p><a href="https://www.youtube.com/watch?v=tG_TfS1cYMI&list=RDtG_TfS1cYMI&start_radio=1">Audio Source!!! Overscorn - Nostalgic Breakdown!!! Super cool!</a></p>
+      <p style="font-size:0.5em">Page made by Jesus Monroy IV • 2025, GIFs sourced from GIPHY and TENOR, Creative Commons, © 2025 Yahoo. All rights reserved.</p>
+    </main>
+
+    <!-- Right sidebar, 100Ps -->
+    <aside class="sidebar">
+      <strong>Shoutbox</strong>
+      <div class="shoutbox">
+        <div>
+          <p style="color:yellow;margin:30px 0;">Yo what's up!!1</p>
+          <p style="color:lime;margin:30px 0;">luv ur site!!!</p>
+          <p style="color:cyan;margin:30px 0;">add me on ICQ 123456789</p>
+          <p style="color:magenta;margin:30px 0;">kewl page bro</p>
+          <p style="color:rgb(175, 23, 112);margin:30px 0;">hop on aol </p>
+          <p style="color:rgb(221, 228, 250);margin:30px 0;">Hope you finish this!!!!!</p>
+          <p style="color:rgb(197, 15, 15);margin:30px 0;">got a runescape user???</p>
+          <p style="color:rgb(48, 112, 35);margin:30px 0;">hey i know you</p>
+          <p style="color:rgb(255, 105, 180);margin:30px 0;">this site is awesome!!!</p>
+          <p style="color:rgb(0, 255, 255);margin:30px 0;">add me on msn!!!</p>
+          <p style="color:rgb(255, 255, 0);margin:30px 0;">check out my geocities!</p>
+          <p style="color:rgb(0, 255, 0);margin:30px 0;">site work ahead? Well i sure hope it is!</p>
+          <p style="color:rgb(255, 165, 0);margin:30px 0;">this site is the bomb diggity!</p>
+        </div>
+      </div>
+    </aside>
+  </div>
+ <!--Bottom Marquee-->
+  <div class="marquee alternate">
+    <span>THANKS FOR VISITING!!! COME BACK SOON!!! - Jesus</span>
+  </div>
+
+</div>
+<!--Getting out of making a separate JS file tutorial-->
+<script>
+document.getElementById('counter').textContent = Math.floor(Math.random() * 999999);
+</script>
+
+</body>
+</html>
