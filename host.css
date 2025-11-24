@@ -115,7 +115,7 @@
      z-index: 10;
    }
 
-   /* Individual era styles TBA */
+   /* Individual era styles, more TBA */
    .era-2000s {
      border-color: #00ff00;
      background: linear-gradient(135deg, #000, #113a00);
@@ -202,11 +202,6 @@
    .era-contemporary a:hover { border-left: 6px solid #ff6ec7; }
 
 
-   /* Glitch effect on hover for Y2K */
-   .era-2000s a:hover {
-     animation: glitch 0.6s linear;
-   }
-
    @keyframes glitch {
      0%,100% { clip: rect(0,9999px,0,0); }
      20% { clip: rect(0,9999px,20px,0); }
@@ -234,5 +229,6 @@
      color: #00ffea;
      opacity: 0.7;
    }
+
 
 
