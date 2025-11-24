@@ -30,7 +30,7 @@
      position: relative;
    }
 
-   /* CRT / Scanline overlay */
+   /* CRT */
    body::before {
      content: "";
      position: fixed;
@@ -53,7 +53,7 @@
      50% { opacity: 0.2; }
    }
 
-   /* Main hub container */
+
    .hub {
      min-height: 100vh;
      display: grid;
@@ -63,7 +63,7 @@
      align-content: start;
    }
 
-   /* Header - futuristic title */
+  
    header {
      grid-column: 1 / -1;
      text-align: center;
@@ -96,7 +96,7 @@
      to { filter: hue-rotate(360deg); }
    }
 
-   /* Era portals */
+   
    .era {
      background: rgba(20, 20, 40, 0.7);
      border: 2px solid;
@@ -115,13 +115,13 @@
      z-index: 10;
    }
 
-   /* Individual era styles */
-   .era-90s {
+   /* Individual era styles TBA */
+   .era-2000s {
      border-color: #00ff00;
      background: linear-gradient(135deg, #000, #113a00);
      box-shadow: 0 0 20px #00ff0080;
    }
-   .era-90s h2 {
+   .era-2000s h2 {
      font-family: 'Press Start 2D', cursive;
      color: #00ff41;
      text-shadow: 4px 4px 0 #000;
@@ -129,22 +129,22 @@
      image-rendering: pixelated;
    }
 
-   .era-y2k {
+   .era-Win7 {
      border-image: linear-gradient(45deg, #ff00ff, #00ffff) 1;
      background: linear-gradient(45deg, #1a0033, #000);
    }
-   .era-y2k h2 {
+   .era-Win7 h2 {
      font-family: 'Orbitron', sans-serif;
      color: #ff00ff;
      text-shadow: 0 0 20px #ff00ff;
    }
 
-   .era-2000s {
+   .era-contemporary {
      border-color: #3399ff;
      background: #001122 radial-gradient(circle at 30% 30%, #003366, transparent);
    }
-   .era-2000s h2 {
-     font-family: Arial, sans-serif;
+   .era-contemporary h2 {
+     font-family: Verdana, sans-serif;
      color: #66ccff;
      font-weight: bold;
      letter-spacing: 2px;
@@ -161,15 +161,7 @@
      text-shadow: 0 0 15px #ff6ec7;
    }
 
-   .era-modern {
-     border-color: #00d4ff;
-     background: #0a0a1f;
-   }
-   .era-modern h2 {
-     font-family: 'Segoe UI', sans-serif;
-     color: #00d4ff;
-     font-weight: 600;
-   }
+
 
    /* Link list */
    .links {
@@ -198,13 +190,13 @@
    }
 
    /* Underline effects per era */
-   .era-90s a:hover   { border-left: 6px solid #00ff00; }
-   .era-y2k a:hover   { border-left: 6px solid #ff00ff; }
-   .era-vaporwave a:hover { border-left: 6px solid #ff6ec7; }
-   .era-modern a:hover { border-bottom: 3px solid #00d4ff; }
+   .era-2000s a:hover   { border-left: 6px solid #00ff00; }
+   .era-Win7 a:hover   { border-left: 6px solid #ff00ff; }
+   .era-contemporary a:hover { border-left: 6px solid #ff6ec7; }
+
 
    /* Glitch effect on hover for Y2K */
-   .era-y2k a:hover {
+   .era-2000s a:hover {
      animation: glitch 0.6s linear;
    }
 
@@ -235,3 +227,4 @@
      color: #00ffea;
      opacity: 0.7;
    }
+
