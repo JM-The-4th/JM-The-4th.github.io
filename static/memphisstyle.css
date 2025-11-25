@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+    :root {
+      --pink: #FF6B9D;
+      --yellow: #FFC75F;
+      --blue: #4D7CFF;
+      --green: #4ECDC4;
+      --purple: #9B59B6;
+      --bg: #F5F7FF;
+      --dark: #2C3E50;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    .container { 
+        max-width: 
+        1200px; 
+        margin: 0 auto; 
+        padding: 0 2rem; }
+
+    /* Header */
+    header {
+      padding: 2rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--blue);
+    }
+    nav a {
+      margin-left: 2rem;
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 600;
+    }
+    nav a:hover { color: var(--pink); }
+
+    /* irony container*/
+    .hero {
+      min-height: 90vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 4rem;
+      padding: 4rem 0;
+    }
+    .hero h1 {
+      font-size: 4.5rem;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      opacity: 0.8;
+    }
+    .better {
+      color: var(--pink);
+    }
+    .btn {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background: var(--pink);
+      color: white;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 10px 30px rgba(255,107,157,0.3);
+      transition: all 0.3s;
+    }
+    .btn:hover { 
+        transform: translateY(-5px); 
+        box-shadow: 0 20px 40px rgba(255,107,157,0.4); }
+
+    /* Illustrations. As above so below, svg is hell */
+    .illustration {
+      position: relative;
+      width: 100%;
+      height: 500px;
+    }
+    .person {
+      position: absolute;
+      background: var(--blue);
+      border-radius: 50% 50% 50% 0;
+      transform: rotate(-15deg);
+    }
+    .person1 {
+      width: 180px; height: 280px;
+      bottom: 80px; left: 80px;
+      background: var(--purple);
+    }
+    .person2 {
+      width: 160px; height: 240px;
+      top: 50px; right: 100px;
+      background: var(--yellow);
+      border-radius: 50% 50% 0 50%;
+      transform: rotate(20deg);
+    }
+    .person3 {
+      width: 140px; height: 220px;
+      bottom: 120px; right: 20px;
+      background: var(--green);
+      transform: rotate(-30deg);
+    }
+    .arm {
+      position: absolute;
+      background: var(--pink);
+      border-radius: 60px;
+    }
+    .arm1 {
+      width: 100px; height: 40px;
+      bottom: 180px; left: 40px;
+      transform: rotate(40deg);
+    }
+    .arm2 {
+      width: 90px; height: 35px;
+      top: 140px; right: 60px;
+      transform: rotate(-50deg);
+    }
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(40px);
+      opacity: 0.4;
+    }
+    .blob1 { 
+        width: 300px; 
+        height: 300px; 
+        background: var(--pink); 
+        top: 0; 
+        left: 0; }
+    .blob2 { 
+        width: 250px; 
+        height: 250px; 
+        background: var(--yellow); 
+        bottom: 0; 
+        right: 0; }
+
+    /* Features */
+    .features {
+      padding: 8rem 0;
+      background: white;
+      text-align: center;
+    }
+    .features h2 {
+      font-size: 3rem;
+      margin-bottom: 4rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 3rem;
+    }
+    .card {
+      background: var(--bg);
+      padding: 3rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+    }
+    .card h3 { 
+        font-size: 1.8rem; 
+        margin: 1.5rem 0; 
+        color: var(--blue); 
+    }
+    .icon {
+      font-size: 3rem;
+    }
+    /* Footer */
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 4rem 0;
+    }

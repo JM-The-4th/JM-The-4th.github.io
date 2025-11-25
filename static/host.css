@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Press+Start+2D&family=VT323&family=Share+Tech+Mono&display=swap');
+
+   :root {
+     --hue-primary: 220;
+     --color-bg: #0d0d1f;
+     --color-fg: #e0e7ff;
+     --color-accent-90s: #00ff41;
+     --color-accent-y2k: #ff00ff;
+     --color-accent-vapor: #ff6ec7;
+     --color-accent-modern: #00d4ff;
+     --scanline: rgba(0, 0, 0, 0.1);
+   }
+
+   * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+   }
+
+   html, body {
+     height: 100%;
+     font-family: 'Share Tech Mono', monospace;
+     background: var(--color-bg);
+     color: var(--color-fg);
+     overflow-x: hidden;
+   }
+
+   body {
+     background: radial-gradient(circle at center, #969696 0%, #0d0d1f 100%);
+     position: relative;
+   }
+
+   /* CRT */
+   body::before {
+     content: "";
+     position: fixed;
+     top: 0; left: 0; right: 0; bottom: 0;
+     background: repeating-linear-gradient(
+       0deg,
+       transparent,
+       transparent 2px,
+       var(--scanline) 20px,
+       var(--scanline) 20px
+     );
+     pointer-events: none;
+     z-index: 9999;
+     opacity: 0.4;
+     animation: flicker 1s infinite linear;
+   }
+
+   @keyframes flicker {
+     0%, 100% { opacity: 1; }
+     50% { opacity: 0; }
+   }
+
+
+   .hub {
+     min-height: 100vh;
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+     gap: 2rem;
+     padding: 4vh 4vw;
+     align-content: start;
+   }
+
+  
+   header {
+     grid-column: 1 / -1;
+     text-align: center;
+     padding: 4rem 2rem;
+     position: relative;
+   }
+
+   header h1 {
+     font-family: 'Orbitron', sans-serif;
+     font-size: clamp(3rem, 10vw, 8rem);
+     font-weight: 900;
+     background: linear-gradient(0deg, #ffffff, #000000, #8a8a8a);
+     -webkit-background-clip: text;
+     background-clip: text;
+     color: transparent;
+     
+     
+   }
+
+   header p {
+     font-family: 'VT323', monospace;
+     font-size: 1.5rem;
+     margin-top: 1rem;
+     color: #00ffea;
+     text-shadow: 0 0 10px #00ffea;
+   }
+
+    .static {
+      /* Apply the noise on top of your element */
+      position: relative;
+    }
+
+    .static::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  filter: url(#noise);
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+    }
+   
+   .era {
+     background: rgba(20, 20, 40, 0.7);
+     border: 2px solid;
+     border-radius: 15px;
+     padding: 2rem;
+     position: relative;
+     overflow: hidden;
+     backdrop-filter: blur(8px);
+     -webkit-backdrop-filter: grayscale(1);
+     transition: all 0.4s ease;
+     box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+   }
+
+   .era:hover {
+     transform: translateY(-15px) scale(1.03);
+     box-shadow: 0 0 60px rgba(0, 255, 255, 0.6);
+     z-index: 10;
+   }
+
+
+  .era-2000s h2 {
+     font-family: 'Press Start 2D', cursive;
+     
+     text-shadow: 4px 4px 0 #000;
+     margin-bottom: 1rem;
+     image-rendering: pixelated;
+   }
+
+  .era-Win7 {
+    width: 300px;
+    height: 200px;
+    color:rgba(202, 238, 255, 0.945);
+    position: relative;
+    z-index: 10;
+    max-width: 300px;
+    margin: 40px auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 
+        0 8px 32px rgba(0,0,0,0.2),
+        inset 0 2px 10px rgba(255,255,255,0.3);
+    text-align: center;
+}
+
+  
+   .era-contemporary h2 {
+     font-family: Verdana, sans-serif;
+     color: #66ccff;
+     font-weight: bold;
+     letter-spacing: 2px;
+   }
+
+   .era-vaporwave {
+     border-color: #ff6ec7;
+     background: linear-gradient(135deg, #33004d, #000033);
+   }
+   .era-vaporwave h2 {
+     font-family: 'VT323', monospace;
+     font-size: 2.5rem;
+     color: #ff6ec7;
+     text-shadow: 0 0 15px #ff6ec7;
+   }
+
+
+
+   /* Link list */
+   .links {
+     list-style: none;
+     margin-top: 1.5rem;
+   }
+
+   .links li {
+     margin: 0.8rem 0;
+   }
+
+   .links a {
+     color: inherit;
+     text-decoration: none;
+     padding: 0.5rem 1rem;
+     display: block;
+     border-radius: 6px;
+     transition: all 0.3s;
+     position: relative;
+   }
+
+   .links a:hover {
+     background: rgba(255,255,255,0.1);
+     transform: translateX(10px);
+     text-shadow: 0 0 10px currentColor;
+   }
+
+   /* Underline effects per era */
+   .era-2000s a:hover   { border-left: 6px solid #00ff00; }
+   .era-Win7 a:hover   { border-left: 6px solid #c9f7ff; }
+   .era-contemporary a:hover { border-left: 6px solid #6e7cff; }
+
+
+   /* Responsive */
+   @media (max-width: 768px) {
+     .hub {
+       grid-template-columns: 1fr;
+       padding: 2rem 1rem;
+     }
+     header h1 { font-size: 4rem; }
+   }
+
+   /* Footer timestamp */
+   footer {
+     grid-column: 1 / -1;
+     text-align: center;
+     padding: 3rem;
+     font-family: 'VT323', monospace;
+     font-size: 1.2rem;
+     color: #00ffea;
+     opacity: 0.7;
+   }
+
+
+
