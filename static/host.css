@@ -4,8 +4,8 @@
      --hue-primary: 220;
      --color-bg: #0d0d1f;
      --color-fg: #e0e7ff;
-     --color-accent-90s: #00ff41;
-     --color-accent-y2k: #ff00ff;
+     --color-accent-00s: #00ff41;
+     --color-accent-aero: #afffc3;
      --color-accent-vapor: #ff6ec7;
      --color-accent-modern: #00d4ff;
      --scanline: rgba(0, 0, 0, 0.1);
@@ -164,11 +164,13 @@
      box-shadow: 0 0 60px rgba(0, 255, 255, 0.6);
      z-index: 10;
    }
-
+   .era-2000s {
+    background-color: var(--color-accent-00s);
+   }
 
   .era-2000s h2 {
+     opacity: 0.5;
      font-family: 'Press Start 2D', cursive;
-     
      text-shadow: 4px 4px 0 #000;
      margin-bottom: 1rem;
      image-rendering: pixelated;
@@ -179,6 +181,7 @@
     height: 200px;
     color:rgba(202, 238, 255, 0.945);
     position: relative;
+    background-color: var(--color-accent-aero);
     z-index: 10;
     max-width: 300px;
     margin: 40px auto;
@@ -193,11 +196,14 @@
         inset 0 2px 10px rgba(255,255,255,0.3);
     text-align: center;
 }
-
+.era-contemporary {
+  background-color: var(--color-accent-modern);
+}
   
    .era-contemporary h2 {
      font-family: Verdana, sans-serif;
-     color: #66ccff;
+     
+     color: #021753;
      font-weight: bold;
      letter-spacing: 2px;
    }
@@ -236,15 +242,16 @@
    }
 
    .links a:hover {
-     background: rgba(255,255,255,0.1);
+     background: rgba(255, 255, 255, 0.322);
      transform: translateX(10px);
      text-shadow: 0 0 10px currentColor;
    }
 
    /* Underline effects per era */
-   .era-2000s a:hover   { border-left: 6px solid #00ff00; }
-   .era-Win7 a:hover   { border-left: 6px solid #c9f7ff; }
+   .era-2000s a:hover   { border-left: 6px solid #000e3d; }
+   .era-Win7 a:hover   { border-left: 6px solid #74ffd5; }
    .era-contemporary a:hover { border-left: 6px solid #6e7cff; }
+   .era-vaporwave a:hover { border-left: 6px solid #ff6ec7; }
 
 
    /* Responsive */
