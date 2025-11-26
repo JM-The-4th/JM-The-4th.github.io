@@ -6,9 +6,23 @@
   <title>Internet Time Hub</title>
   <link rel="stylesheet" href="static/host.css" type="text/css">
 </head>
-<body>
 
-  <div class="static">
+<body>
+<div class="overlay">
+  <div class="tv-static0">
+    <svg viewBox="0 0 200% 200%" xmlns='http://www.w3.org/2000/svg'>
+
+        <filter id='noiseFilter'>
+          <feTurbulence type='turbulence' result='noise' baseFrequency='0.7' numOctaves='6' seed='2'
+            stitchTiles='noStitch' />
+        </filter>
+
+        <rect width='100%' height='100%' filter='url(#noiseFilter)' />
+      </svg>
+    
+  </div>
+</div>
+ 
   <div class="hub">
     <header>
       <h1>TIME HUB</h1>
@@ -18,7 +32,7 @@
     <section class="era era-2000s">
       <h2>1999-2004</h2>
       <ul class="links">
-        <li><a href="CSSTest.html">Personal blog page</a></li>
+        <li><a href="CSSTest.html">HTML</a></li>
       </ul>
     </section>
 
@@ -33,9 +47,15 @@
     <section class="era era-contemporary">
       <h2>2013-Now</h2>
       <ul class="links">
-        <li><a href="CSSTest3.html">The Company</a></li>
+        <li><a href="CSSTest3.html">Corporate Memphis</a></li>
       </ul>
     </section>
+
+    <section class="era era-vaporwave">
+      <h2>2010-Now</h2>
+      <ul class="links">
+        <li><a href="">Hotline Miami -TBA</a></li>
+      </ul>
 
 
     <!-- TBA 
@@ -47,7 +67,7 @@
 
     <footer>Made at 12am • JM IV</footer>
   </div>
-  </div>
+
 </body>
 </html>
 

@@ -31,28 +31,82 @@
    }
 
    /* CRT */
-   body::before {
-     content: "";
-     position: fixed;
-     top: 0; left: 0; right: 0; bottom: 0;
-     background: repeating-linear-gradient(
-       0deg,
-       transparent,
-       transparent 2px,
-       var(--scanline) 20px,
-       var(--scanline) 20px
-     );
+   .overlay {
      pointer-events: none;
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
      z-index: 9999;
-     opacity: 0.4;
-     animation: flicker 1s infinite linear;
+     background: repeating-linear-gradient(
+       to bottom,
+       var(--scanline),
+       var(--scanline) 2px,
+       transparent 2px,
+       transparent 4px
+     );
+   }
+  .tv-static0 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin: auto;
+  height: 300%;
+  width: 300%;
+  animation: staticNoise 1s steps(2, end) infinite both;
+  transform: translate3d(0, 0, 0);
+  filter: contrast(300%) brightness(50%);
+}
+
+     
+   
+
+  .tv-static0 svg {
+     height: 200%;
+     width: 100%;
+     pointer-events: none;
+     z-index: 10000;
+     opacity: 0.5;
+    transform: scale(2.5);
    }
 
-   @keyframes flicker {
-     0%, 100% { opacity: 1; }
-     50% { opacity: 0; }
-   }
 
+   @keyframes staticNoise {
+  0% {
+    transform: translateX(0px, 0px);
+  }
+  10% {
+    transform: translate(-100px, 100px);
+  }
+  20% {
+    transform: translate(150px, -100px);
+  }
+  30% {
+    transform: translate(-100px, 100px);
+  }
+  40% {
+    transform: translate(100px, -150px);
+  }
+  50% {
+    transform: translate(-100px, 200px);
+  }
+  60% {
+    transform: translate(-200px, -100px);
+  }
+  70% {
+    transform: translateY(50px, 100px);
+  }
+  80% {
+    transform: translate(100px, -150px);
+  }
+  90% {
+    transform: translate(0px, 200px);
+  }
+  100% {
+    transform: translate(-100px, 100px);
+  }
+}
 
    .hub {
      min-height: 100vh;
@@ -91,19 +145,6 @@
      text-shadow: 0 0 10px #00ffea;
    }
 
-    .static {
-      /* Apply the noise on top of your element */
-      position: relative;
-    }
-
-    .static::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  filter: url(#noise);
-  mix-blend-mode: soft-light;
-  pointer-events: none;
-    }
    
    .era {
      background: rgba(20, 20, 40, 0.7);
